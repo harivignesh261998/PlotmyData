@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization - Homework 2</title>
+    <link rel="stylesheet" href="styles.css"/>
+    
+    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <style>
+        .axis {
+	  font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="assets/fifa_russia_logo.png" alt="Fifa WC Russia Logo" id="logo"/>
+    <h1>Exploring FIFA World Cup Statistics: Homework 2</h1>
+    <div>Name: Hari Vignesh; E-Mail: harivignesh261998@gmail.com</div>
+</header>
+
+<div id="bar-chart" class="view">
+    <h2 class="">Bar Chart</h2>
+    <div id="plot-selector">
+        <label>Plot:</label>
+        <select id="dataset" onchange="chooseData()">
+            <option selected>Select Option</option>
+            <option value="AVERAGE_ATTENDANCE">Attendance</option>
+            <option value="TEAMS">Teams</option>
+            <option value="MATCHES">Matches</option>
+            <option value="GOALS">Goals</option>
+        </select>
+    </div>
+
+    <svg width="500" height="400" id="barChart">
+        <g class="xAxis"></g>
+        <g class="yAxis"></g>
+        <g class="bars"></g>
+    </svg>
+</div>
+
+
+<script type="application/javascript" src="script.js"></script>
+
+
+
+</body>
+</html>
